@@ -1,0 +1,3 @@
+def baz():
+	print('baz')
+
