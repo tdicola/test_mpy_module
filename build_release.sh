@@ -2,9 +2,9 @@
 function build_mpy() {
   SOURCE_PY=$(echo "$1" | sed 's/.mpy/.py/')
   echo "Generating .mpy for: $SOURCE_PY"
-  #mpy-cross "$SOURCE_PY"
+  mpy-cross "$SOURCE_PY"
   # For local testing, uncomment to just copy .py to .mpy files:
-  cp "$SOURCE_PY" "${SOURCE_PY%%.py}.mpy"
+  #cp "$SOURCE_PY" "${SOURCE_PY%%.py}.mpy"
 }
 
 function build_package() {
