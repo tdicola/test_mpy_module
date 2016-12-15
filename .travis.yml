@@ -48,6 +48,10 @@ deploy:
   on:
     tags: true
 
-before_install: ./install_dependencies.sh
+before_install:
+  - wget https://raw.githubusercontent.com/tdicola/test_mpy_module/master/install_dependencies.sh
+  - source install_dependencies.sh
 
-before_deploy: ./build_release.sh
+before_deploy:
+  - wget https://raw.githubusercontent.com/tdicola/test_mpy_module/master/build_release.sh
+  - ./build_release.sh
